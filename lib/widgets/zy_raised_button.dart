@@ -5,12 +5,13 @@ class ZYRaisedButton extends StatelessWidget {
   final String text;
   final Function callback;
   final bool isActive;
-
+  final bool hasMargin;
   final double horizontalPadding;
   final double verticalPadding;
   const ZYRaisedButton(this.text, this.callback,
       {Key key,
       this.isActive: true,
+      this.hasMargin: true,
       this.horizontalPadding,
       this.verticalPadding})
       : super(key: key);
@@ -36,7 +37,8 @@ class ZYRaisedButton extends StatelessWidget {
               width: 1,
               color: isActive ? themeData.accentColor : themeData.disabledColor,
             )),
-        margin: EdgeInsets.symmetric(vertical: UIKit.height(20)),
+        margin:
+            EdgeInsets.symmetric(vertical: hasMargin ? UIKit.height(20) : 0),
         padding: EdgeInsets.symmetric(
             horizontal: horizontalPadding ?? UIKit.width(36),
             vertical: verticalPadding ?? UIKit.height(8)),

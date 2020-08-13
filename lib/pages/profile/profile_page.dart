@@ -246,18 +246,19 @@ class _ProfilePageState extends State<ProfilePage> {
               },
             ),
             ZYListTile(
-              title: '用户协议',
-              callback: () {
-                RouteHandler.goProtocalPage(context);
-              },
-            ),
-            ZYListTile(
               title: '关于淘居屋',
-              showDivider: false,
               callback: () {
                 RouteHandler.goVersionPage(context);
               },
             ),
+            ZYListTile(
+              title: '隐私政策和用户协议',
+              showDivider: false,
+              callback: () {
+                RouteHandler.goProtocalPage(context);
+              },
+            ),
+
             VSpacing(20),
             // _LoginButton(
             //   title: '切换账号',

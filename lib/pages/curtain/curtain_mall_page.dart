@@ -684,6 +684,7 @@ class _CurtainMallPageState extends State<CurtainMallPage>
   void clear() {
     TargetOrderGoods.instance.clear();
     TargetClient.instance.clear();
+    TargetOrderGoods.instance.orderGoodsId = null;
   }
 
   @override

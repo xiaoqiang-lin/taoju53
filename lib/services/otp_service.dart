@@ -159,6 +159,7 @@ class OTPService {
     params.addAll({
       'type': 5,
     });
+
     Response response = await xhr.get(context, ApiPath.skuAttr, params: params);
 
     return PartAttr.fromJson(response.data);
@@ -171,6 +172,7 @@ class OTPService {
     params.addAll({
       'type': 12,
     });
+
     Response response = await xhr.get(context, ApiPath.skuAttr, params: params);
 
     return WindowShadeAttr.fromJson(response.data);

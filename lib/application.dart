@@ -18,10 +18,12 @@ class Application {
   static SharedPreferences sp;
   static String deviceInfo;
   static String versionInfo;
+
   static const String apkName = '淘居屋商家.apk';
   static AppInfoWrapper appInfo;
   static Future<AppUpgradeInfo> appUpgradeInfo;
   static AppInfoModel appInfoModel;
+  static bool get hasAgree => sp?.getBool('hasAgree') ?? false;
   static init() async {
     sp = await SharedPreferences.getInstance();
     deviceInfo = await getAppInfo();

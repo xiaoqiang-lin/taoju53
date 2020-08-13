@@ -18,7 +18,7 @@ class _UserProtocalPageState extends State<UserProtocalPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('用户协议'),
+        title: Text('隐私政策和用户协议'),
       ),
       body: ZYFutureBuilder(
           futureFunc: OTPService.protocal,

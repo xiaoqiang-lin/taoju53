@@ -34,7 +34,6 @@ class TargetOrderGoods {
   }
 
   clear() {
-    _instance.orderGoodsId = null;
     _instance.hasConfirmMeasureData = false;
     _instance.orderId = null;
   }
